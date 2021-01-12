@@ -3,10 +3,16 @@ import { Switch, Route, Link} from "react-router-dom";
 import HomePage from "./pages/homepage/homepage.component";
 
 
-const HatsPage = () => {
+
+
+
+
+
+const HatsPage = props => {
+  console.log(props)
   return (
     <div>
-      <Link to="/hats-page">HATS PAGE</Link>
+      <button onClick={() => props.history.push("/topics")}></button>
       <h1>HATS PAGE </h1>
   </div>
   );
@@ -16,8 +22,8 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route path="/" component={HomePage} />
-        <Route exact path="/hats-page" component={HatsPage} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/hats-page" component={HatsPage} />
       </Switch>
     </div>
   );
