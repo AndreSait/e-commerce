@@ -22,17 +22,17 @@ const Header = ({ currentUser }) => (
                 CONTACT
             </Link>
             {console.log(currentUser)}
-            {    
-         
-                currentUser ? 
-                <div className="option" onClick={() => auth.signOut()}>
-                    SIGN OUT
+            {
+
+                currentUser ?
+                    <div className="option" onClick={() => auth.signOut()}>
+                        SIGN OUT
                     </div>
-                :
-                <Link className="option" to="/signin">
-                    SIGN IN
+                    :
+                    <Link className="option" to="/signin">
+                        SIGN IN
                 </Link>
-            }           
+            }
         </div>
     </div>
 )
